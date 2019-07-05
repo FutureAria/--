@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -109,4 +110,5 @@ async def on_message(message):
     if message.content.startswith('!흑마법사'):
         await client.send_message(message.channel,"```강령사제 / 그림자 마귀 / 맹독사 에니그마 연금술사 저주술사 흑마법사 ```")
 
-client.run('NTk2NjI1MzY0MTIyNTk5NDQ0.XR8Sew.1WcqzadjHputuar1Sl_NjPnjcSk')
+access_token = os.environ["BOT_TOKEN"]
+client.run('access_token')
